@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      //TODO: мультиязычность.
       title: 'Habit Tracker',
-      darkTheme: FlexThemeData.dark(scheme: FlexScheme.bahamaBlue),
+      darkTheme: FlexThemeData.dark(scheme: FlexScheme.blumineBlue  ),
       themeMode: ThemeMode.dark,
       home: HomeScreen(),
     );

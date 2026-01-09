@@ -38,6 +38,7 @@ class DailySummaryCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
+                    //TODO: мультиязычность.
                     'Daily summary',
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: colorCheme.onPrimaryContainer,
@@ -60,7 +61,7 @@ class DailySummaryCard extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Stack(
                 children: [
                   ClipRRect(
@@ -76,7 +77,7 @@ class DailySummaryCard extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Row(
                 children: [
                   Icon(Icons.check_circle),

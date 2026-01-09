@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:habit_tracker_test/features/habit/views/habit_card_list.dart';
 import 'package:habit_tracker_test/shared/components/daily_summary_card.dart';
 import 'package:habit_tracker_test/shared/components/timeline_view.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -11,6 +12,7 @@ class HomeScreen extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedDate = useState(DateTime.now());
     return Scaffold(
+      //TODO: мультиязычность.
       appBar: AppBar(title: Text('Habit Tracker')),
       body: SafeArea(
         child: Padding(
@@ -27,7 +29,8 @@ class HomeScreen extends HookConsumerWidget {
                 totalTasks: 8,
                 date: '10-10-2025',
               ),
-              
+              const SizedBox(height: 16),
+              HabitCardList(selectedDate: selectedDate.value),
             ],
           ),
         ),
