@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:habit_tracker_test/shared/components/daily_summary_card.dart';
 import 'package:habit_tracker_test/shared/components/timeline_view.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -17,11 +18,16 @@ class HomeScreen extends HookConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
               TimelineView(
                 selectedDate: selectedDate.value,
                 onSelectedDateChanged: (date) => selectedDate.value = date,
               ),
+              DailySummaryCard(
+                completedTasks: 4,
+                totalTasks: 8,
+                date: '10-10-2025',
+              ),
+              
             ],
           ),
         ),

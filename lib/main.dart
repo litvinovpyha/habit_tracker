@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Habit Tracker',
-      darkTheme: FlexThemeData.dark(scheme: FlexScheme.mallardGreen),
+      darkTheme: FlexThemeData.dark(scheme: FlexScheme.bahamaBlue),
       themeMode: ThemeMode.dark,
       home: HomeScreen(),
     );
